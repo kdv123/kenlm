@@ -8,7 +8,8 @@ set -e
 
 CXX=${CXX:-g++}
 
-CXXFLAGS+=" -I. -O3 -DNDEBUG -DKENLM_MAX_ORDER=6"
+# KDV: changed from max order of 6
+CXXFLAGS+=" -I. -O3 -DNDEBUG -DKENLM_MAX_ORDER=12"
 
 #If this fails for you, consider using bjam.
 if [ ${#NPLM} != 0 ]; then

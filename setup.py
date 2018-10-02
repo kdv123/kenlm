@@ -21,7 +21,8 @@ else:
     LIBS = []
 
 #We don't need -std=c++11 but python seems to be compiled with it now.  https://github.com/kpu/kenlm/issues/86
-ARGS = ['-O3', '-DNDEBUG', '-DKENLM_MAX_ORDER=6', '-std=c++11']
+# KDV: changed from max order of 6
+ARGS = ['-O3', '-DNDEBUG', '-DKENLM_MAX_ORDER=12', '-std=c++11']
 
 if compile_test('zlib.h', 'z'):
     ARGS.append('-DHAVE_ZLIB')
